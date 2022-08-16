@@ -15,11 +15,30 @@
         />
     </head>
     <body>
+        <!------------- navbar -------------->
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
                     <img src="./assets/Logo.png" alt="logo" />
                 </div>
+                <div class="hamburger">
+                    <svg viewBox="0 0 100 80" width="30" height="30">
+                        <rect width="100" height="10"></rect>
+                        <rect y="30" width="100" height="10"></rect>
+                        <rect y="60" width="100" height="10"></rect>
+                    </svg>
+                </div>
+                <ul class="mobile-list">
+                    <li class="list-item">Home</li>
+                    <li class="list-item">Domain</li>
+                    <li class="list-item">Hosting</li>
+                    <li class="list-item">Features</li>
+                    <li class="list-item">Pricing</li>
+                    <li class="list-item">About Us</li>
+                    <li class="list-item">
+                        <button class="btn-outline">Register Now</button>
+                    </li>
+                </ul>
                 <ul class="list">
                     <li class="list-item">Home</li>
                     <li class="list-item">Domain</li>
@@ -32,6 +51,7 @@
                     </li>
                 </ul>
             </nav>
+            <!----------- hero section ------------>
             <section class="hero">
                 <div class="hero-left">
                     <h1>
@@ -52,7 +72,7 @@
                     <img src="./assets/server.svg" alt="image" />
                 </div>
             </section>
-
+           <!----------- testing ----------->
             <section class="testing">
                 <div class="testing-left">
                     <img src="./assets/testing.svg" alt="testing" />
@@ -73,7 +93,7 @@
                 </div>
             </section>
 
-            <!-- technical-section -->
+            <!----------- technical-section ------------->
             <section class="technical-section">
                 <div class="technical-section-left">
                     <h2>
@@ -98,7 +118,7 @@
                 </div>
             </section>
 
-            <!-- services section -->
+            <!--------- services section ---------->
             <section class="services-section">
                 <div class="services-headline">
                     <h2>
@@ -195,7 +215,7 @@
                 </div>
             </section>
 
-            <!-- pricing section -->
+            <!------------- pricing section -------------->
             <section class="pricing-wrapper">
                 <h2>Flexible & Transparent Pricing</h2>
                 <div class="pricing">
@@ -342,7 +362,7 @@
                 </div>
             </section>
 
-            <!-- customer section -->
+            <!--------------- customer section ----------------->
             <section class="customer-section">
                 <h1>Our Customer Love Us</h1>
                 <p>
@@ -445,7 +465,7 @@
                     </div>
                 </div>
             </section>
-
+             <!--------------- footer wrapper ------------------>
             <div class="footer-wrapper">
                 <div class="footer-container">
                     <div class="footer">
@@ -538,5 +558,12 @@
                 </div>
             </div>
         </div>
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const mobileNavBar = document.querySelector(".mobile-list");
+            hamburger.addEventListener("click", () => {
+                mobileNavBar.classList.toggle("show-navbar");
+            });
+        </script>
     </body>
 </html>
